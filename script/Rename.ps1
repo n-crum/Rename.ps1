@@ -1,7 +1,7 @@
 if (Test-Path images\*) {
     cd images
     $files = dir
-    dir | Rename-Item -NewName {$_.Name+".tiff"}
+    dir | Rename-Item -NewName {$_.BaseName+".tiff"}
 
     Write-Host("")
     Write-Host("Renamed the following files:")
